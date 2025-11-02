@@ -586,7 +586,7 @@ body.dark-mode .btn {
   background-color: var(--color-secondary);
   color: var(--color-neutral-100);
 }
-
+    
 body.dark-mode .btn:hover {
   background-color: var(--color-secondary-dark);
 }
