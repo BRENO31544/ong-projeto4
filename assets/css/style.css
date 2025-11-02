@@ -1,9 +1,8 @@
-    :root {
-        /* Paleta de Cores */
-        --color-primary: #76c7c0;
-        --color-primary-dark: #5ba7a2;
-        --color-secondary: #4CAF50;
-        --color-secondary-dark: #45a049;
+   :root {
+        --color-primary: #3b9b93;      
+        --color-primary-dark: #2e7c75; 
+        --color-secondary: #3f9142;      
+        --color-secondary-dark: #347a37; 
         
         --color-neutral-100: #ffffff;
         --color-neutral-200: #f8fbff;
@@ -271,6 +270,8 @@
         display: block;
     }
 
+    
+
     /* MEDIA QUERIES PARA MOBILE */
     @media (max-width: 768px) {
         .menu-hamburguer {
@@ -521,16 +522,6 @@
         margin: 15px auto;
     }
 
-    /* IMPORTANTE: Remova a linha 'display: block;' da classe .active se você a tinha, 
-    pois 'height: auto;' fará a exibição corretamente. 
-    O código atual: */
-
-    /* main section.active {
-        display: block; <--- REMOVA SE VOCÊ AINDA ESTIVER USANDO ISTO
-        opacity: 1;
-        transform: translateY(0);
-    } */
-
     /* Destaque do link ativo no menu */
     .menu a.active {
     font-weight: bold;
@@ -544,4 +535,64 @@
         transition: opacity 0.3s ease;
     }
     }
+
+    /* ===== BOTÃO DE TEMA ===== */
+.btn-theme {
+  background: none;
+  border: 2px solid var(--color-neutral-100);
+  color: var(--color-neutral-100);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary);
+}
+
+/* ===== TEMA ESCURO ===== */
+body.dark-mode {
+  --color-neutral-100: #121212;
+  --color-neutral-200: #1e1e1e;
+  --color-neutral-600: #ccc;
+  --color-neutral-900: #f8f8f8;
+
+  --color-primary: #2e7c75;
+  --color-primary-dark: #215c56;
+  --color-secondary: #347a37;
+  --color-secondary-dark: #2a622c;
+
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-900);
+}
+
+/* Ajustes visuais do modo escuro */
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-neutral-900);
+}
+
+body.dark-mode section {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+}
+
+body.dark-mode .btn {
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-100);
+}
+
+body.dark-mode .btn:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+body.dark-mode .menu a.active {
+  border-bottom-color: var(--color-neutral-900);
+}
+
 
