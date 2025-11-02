@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("themeToggle");
   const body = document.body;
 
-  // Verifica se há preferência salva no localStorage
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     body.classList.add("dark-mode");
